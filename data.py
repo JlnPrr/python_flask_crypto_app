@@ -18,7 +18,7 @@ def data():
         writer.writerow({'Montant': montant, 'Date': date})
 
 
-schedule.every().day.at("13:19").do(data)
+schedule.every().day.at("13:40").do(data)
 
 while 1:
     schedule.run_pending()
