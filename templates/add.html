@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <!---------- HEADER ---------->
+    <header>
+        <!-- Icon Cancel -->
+        <div><a href="/"><img class="icon-cancel" src="static/images/cancel.png" alt="Icon cancel"></a></div>
+        <!-- Page Title -->
+        <h1>Ajouter une transaction</h1>
+    </header>
+    <hr>
+
+    <!---------- MAIN CONTENT ---------->
+    <section>
+
+        <form class="form-add"method="POST">
+
+            <!-- Crypto list -->
+            <div>
+                <select class="select-add" name="select_add">
+                  <option>Sélectionner une crypto</option>
+                  <option value="Bitcoin">Bitcoin</option>
+                  <option value="Ethereum">Ethereum</option>
+                  <option value="Ripple">Ripple</option>
+                </select>
+            </div>
+
+            <!-- Crypto quantity -->
+            <div>
+                <input class="input-add" name="quantity" placeholder="Quantitée">
+            </div>
+
+            <!-- Crypto price -->
+            <div>
+                <input class="input-add" name="price" placeholder="Prix d'achat">
+            </div>
+
+            <!-- Submit button -->
+            <input class="submit-add" type="submit" value="AJOUTER">
+
+        </form>
+
+    </section>
+{% endblock %}

@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url(//db.onlinewebfonts.com/c/4a86e4751d2650701d8bb25433b8781e?family=Akzidenz-Grotesk+BQ+Super);
+@import url(//db.onlinewebfonts.com/c/8107cd50f291793820349da55432e959?family=Akzidenz-Grotesk+BQ);
+
+* {
+  margin:0;
+  padding:0;
+}
+
+body, html {
+  height:100%;
+}
+
+body {
+  text-align:center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #efefef;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #efefef;
+    margin-top: 1.3vh;
+    font-size: 1.15rem;
+
+}
+
+#container {
+    background-color: #100f0f;
+    min-height:100%;
+    max-width: 70%;
+    margin: auto;
+}
+
+
+/******* HEADER *******/
+header {
+    padding: 1%;
+    min-height: 5.2vh;
+}
+
+/* LOGO, ICONS */
+#logo {
+    font-family: 'Akzidenz-Grotesk+BQ', sans-serif;
+    font-size: 1.1rem;
+    color: #efefef;
+    float: left;
+    margin-left: 0.8vw;
+    margin-top: 1.5vh;
+}
+.icon-cancel {
+    height: 20px;
+    width: 20px;
+    color: #efefef;
+    float: left;
+    margin-left: 0.8vw;
+    margin-top: 1.5vh;
+}
+.nav-icon {
+  height: 14px;
+  width: 14px;
+  object-fit: cover;
+}
+
+/* NAVIGATION */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: right;
+}
+li {
+    margin-right: 0.2vw;
+    display: inline-block;
+    text-align: right;
+}
+li a {
+    display: inline-block;
+    color: #efefef;
+    text-align: center;
+    padding: 0.3rem 0.5rem;
+    margin-top: 1vh;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #1fc36c;
+}
+
+
+/******* SECTION *******/
+/* SEPARATOR */
+hr {
+  height: 1px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  background-color: rgb(239, 239, 239, 0.2);
+}
+
+/******* SECTION INDEX PAGE *******/
+/* BACKGROUND IMAGE */
+#balance {
+  background-image: url('/static/images/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 22vh;
+  margin-bottom: 6.5vh;
+}
+/* AMOUNT */
+#balance a {
+    display: inline-block;
+    color: #efefef;
+    text-align: center;
+    padding: 15px 17px;
+    text-decoration: none;
+    font-size: 2.6rem;
+}
+
+/* EVOLUTIONS */
+.evolution {
+    width: 90%;
+    margin: auto;
+}
+.crypto-icon {
+    height: 28px;
+    width: 28px;
+    margin-right: 0.15vw;
+}
+.evo-row {
+    display: flex;
+    justify-content: space-between;
+}
+.evo-row p {
+    font-size: 1.1rem;
+    padding: 5.5%;
+    color: #efefef;
+}
+.icon-names {
+    display: flex;
+}
+
+/******* SECTION ADD PAGE AND REMOVE PAGE *******/
+.form-add, .form-remove {
+    margin-top: 10vh;
+}
+.input-add, .input-remove {
+    height: 4.2vh;
+    width: 51vw;
+    margin-top: 5vh;
+    padding: 1.2%;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #efefef;
+    background-color: #100f0f;
+    border: 1px solid rgb(239, 239, 239, 1);
+}
+.select-add, .select-remove {
+    height: 6vh;
+    width: 53vw;
+    margin-top: 5vh;
+    padding: 1.2%;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #100f0f;
+    border: 1px solid rgb(239, 239, 239, 1);
+}
+.submit-add, .submit-remove {
+    margin-top: 10vh;
+    height: 5vh;
+    width: 27vw;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: gray;
+}
+::-webkit-input-placeholder, .select-add, .select-remove { /* WebKit browsers */
+    color:    #efefef;
+    opacity: 1 !important;
+}
+
+/******* SECTION GRAPH PAGE *******/
+.graph {
+    height: 50vh;
+    width: 40vw;
+    margin: 20vh auto 0 auto;
+    background-color: #222222;
+}
+
+
+/********** MEDIA QUERIES **********/
+
+/******* A partir de 576px *******/
+@media only screen and (min-width: 576px){
+
+    /* HEADER */
+    #logo {
+        font-size: 1.4rem;
+        margin-left: 0.8vw;
+        margin-top: 1.1vh;
+    }
+    .icon-cancel {
+        height: 21px;
+        width: 21px;
+    }
+    .nav-icon {
+        height: 18px;
+        width: 18px;
+    }
+    li {
+        margin-right: 0.2vw;
+    }
+    h1 {
+        margin-top: 1.25vh;
+        font-size: 1.25rem;
+    }
+
+    /* SECTION ADD PAGE AND REMOVE PAGE */
+    .input-add, .input-remove {
+        height: 4.2vh;
+        width: 46vw;
+        font-size: 1.1rem;
+    }
+    .select-add, .select-remove {
+        height: 6vh;
+        width: 48vw;
+        font-size: 1.1rem;
+    }
+    .submit-add, .submit-remove {
+        height: 5vh;
+        width: 27vw;
+        font-size: 1.1rem;
+    }
+
+    /* SECTION INDEX PAGE */
+    .evolution {
+        width: 80%;
+    }
+    .evo-row p {
+        font-size: 1.1rem;
+        padding: 5.8%;
+        color: #efefef;
+    }
+}
+
+
+/******* A partir de 768px *******/
+@media only screen and (min-width: 768px){
+
+    /* HEADER */
+    #logo {
+        font-size: 1.6rem;
+        margin-top: 1.6vh;
+    }
+    .icon-cancel {
+        height: 22px;
+        width: 22px;
+    }
+    .nav-icon {
+        height: 20px;
+        width: 20px;
+    }
+    li a {
+        padding: 0.9rem 1rem;
+        margin-top: 0.9vh;
+    }
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    /* SECTION ADD PAGE AND REMOVE PAGE */
+    .input-add, .input-remove {
+        width: 40vw;
+        font-size: 1.1rem;
+    }
+    .select-add, .select-remove {
+        height: 6.5vh;
+        width: 42vw;
+        font-size: 1.1rem;
+    }
+    .submit-add, .submit-remove {
+        width: 27vw;
+        font-size: 1.2rem;
+    }
+
+    /* SECTION INDEX PAGE */
+    #balance a {
+        font-size: 2.8rem;
+    }
+    .evolution {
+        width: 80%;
+    }
+    .evo-row p {
+        font-size: 1.2rem;
+        padding: 5%;
+    }
+}
+
+
+/******* A partir de 992px *******/
+@media only screen and (min-width: 992px){
+
+    /* HEADER */
+    #logo {
+        font-size: 1.8rem;
+        margin-top: 1.5vh;
+    }
+    .icon-cancel {
+        height: 23px;
+        width: 23px;
+        margin-top: 1.4vh;
+    }
+    .nav-icon {
+        height: 21px;
+        width: 21px;
+    }
+    h1 {
+        margin-top: 0.9vh;
+        font-size: 1.5rem;
+    }
+
+    /* SECTION ADD PAGE AND REMOVE PAGE */
+    .input-add, .input-remove {
+        height: 4vh;
+        width: 30vw;
+        font-size: 1.1rem;
+    }
+    .select-add, .select-remove {
+        height: 6.5vh;
+        width: 32vw;
+        font-size: 1.1rem;
+    }
+    .submit-add, .submit-remove {
+        height: 6vh;
+        width: 17vw;
+        font-size: 1.2rem;
+    }
+
+    /* SECTION INDEX PAGE */
+    #balance a {
+        font-size: 2.9rem;
+    }
+    .evolution {
+        width: 75%;
+    }
+    .evo-row p {
+        font-size: 1.3rem;
+        padding: 4.3%;
+    }
+}
+
+
+/******* A partir de 1200px *******/
+@media only screen and (min-width: 1200px) {
+
+    /* HEADER */
+    #logo {
+        font-size: 1.9rem;
+        margin-left: 0.6vw;
+    }
+    .icon-cancel {
+        height: 24px;
+        width: 24px;
+        margin-top: 1.3vh;
+    }
+    .nav-icon {
+        height: 22px;
+        width: 22px;
+    }
+    h1 {
+        margin-top: 0.9vh;
+        font-size: 1.6rem;
+    }
+
+    /* SECTION ADD PAGE AND REMOVE PAGE */
+    .input-add, .input-remove {
+        height: 3.4vh;
+        width: 28vw;
+        font-size: 1.15rem;
+    }
+    .select-add, .select-remove {
+        height: 7vh;
+        width: 30vw;
+        font-size: 1.15rem;
+    }
+    .submit-add, .submit-remove {
+        width: 16vw;
+        font-size: 1.25rem;
+    }
+
+    /* SECTION INDEX PAGE */
+    /* AMOUNT */
+    #balance a {
+        font-size: 3rem;
+    }
+    .evolution {
+        width: 65%;
+    }
+    .evo-row p {
+        font-size: 1.35rem;
+        padding: 4%;
+    }
+}
+
+
+/******* A partir de 1400px *******/
+@media only screen and (min-width: 1400px){
+
+    /* HEADER */
+    #logo {
+        font-size: 2rem;
+        margin-top: 1.3vh;
+    }
+    .icon-cancel {
+    height: 26px;
+    width: 26px;
+}
+    h1 {
+        margin-top: 1.2vh;
+        font-size: 1.7rem;
+    }
+
+    /* SECTION ADD PAGE AND REMOVE PAGE */
+    .input-add, .input-remove {
+        height: 3.2vh;
+        width: 23vw;
+        font-size: 1.25rem;
+    }
+    .select-add, .select-remove {
+        width: 25vw;
+        font-size: 1.25rem;
+    }
+    .submit-add, .submit-remove {
+        width: 13vw;
+        font-size: 1.4rem;
+    }
+
+    /* SECTION INDEX PAGE */
+    .evolution {
+        width: 60%;
+    }
+    .evo-row p {
+        padding: 2.5%;
+    }
+}

@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Tous les fichiers .idea, répertoires et sous-ressources.
+.idea/*
+
+# Tous les fichiers .txt
+*.txt

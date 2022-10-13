@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <!---------- HEADER ---------->
+    <header>
+        <!-- Logo -->
+        <h1 id="logo">Crypto Tracker</h1>
+
+        <!-- Navigation -->
+        <ul>
+            <li><a href="/remove"><img class="nav-icon" src="static/images/edit.png" alt="Edit icon"></a></li>
+            <li><a href="/add"><img class="nav-icon" src="static/images/+.png" alt="Icone +"></a></li>
+        </ul>
+    </header>
+    <hr>
+
+    <!---------- MAIN CONTENT ---------->
+    <section>
+        <!-- Background Image and Amount -->
+        <div id="balance">
+            <a href="/graph">{{amount}} €</a>
+        </div>
+
+        <!-- Cryptos Evolution -->
+        <div class="evolution">
+            <div class="evo-row">
+                <p class="icon-names"><img class="crypto-icon" src="static/images/bitcoin.svg" alt="Crypto icon">{{btc_names}}</p>
+                <p>{{btc_percent}} %</p>
+            </div>
+            <hr>
+            <div class="evo-row">
+                <p class="icon-names"><img class="crypto-icon" src="static/images/ethereum.svg" alt="Crypto icon">{{eth_names}}</p>
+                <p>{{eth_percent}} %</p>
+            </div>
+            <hr>
+            <div class="evo-row">
+                <p class="icon-names"><img class="crypto-icon" src="static/images/xrp.svg" alt="Crypto icon">{{xrp_names}}</p>
+                <p>{{xrp_percent}} %</p>
+            </div>
+            <hr>
+            <div class="evo-row">
+                <p class="icon-names"><img class="crypto-icon" src="static/images/bitcoin.svg" alt="Crypto icon">{{btc_names}}</p>
+                <p>{{btc_percent}} %</p>
+            </div>
+            <hr>
+            <div class="evo-row">
+                <p class="icon-names"><img class="crypto-icon" src="static/images/ethereum.svg" alt="Crypto icon">{{eth_names}}</p>
+                <p>{{eth_percent}} %</p>
+            </div>
+            <hr>
+            <div class="evo-row">
+                <p class="icon-names"><img class="crypto-icon" src="static/images/xrp.svg" alt="Crypto icon">{{xrp_names}}</p>
+                <p>{{xrp_percent}} %</p>
+            </div>
+            <hr>
+            <div class="evo-row">
+                <p class="icon-names"><img class="crypto-icon" src="static/images/bitcoin.svg" alt="Crypto icon">{{btc_names}}</p>
+                <p>{{btc_percent}} %</p>
+            </div>
+            <hr>
+            <div class="evo-row">
+                <p class="icon-names"><img class="crypto-icon" src="static/images/ethereum.svg" alt="Crypto icon">{{eth_names}}</p>
+                <p>{{eth_percent}} %</p>
+            </div>
+            <hr>
+            <div class="evo-row">
+                <p class="icon-names"><img class="crypto-icon" src="static/images/xrp.svg" alt="Crypto icon">{{xrp_names}}</p>
+                <p>{{xrp_percent}} %</p>
+            </div>
+            <hr>
+
+        </div>
+    </section>
+
+{% endblock %}

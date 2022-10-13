@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <!---------- HEADER ---------->
+    <header>
+        <!-- Icon Cancel -->
+        <div><a href="/"><img class="icon-cancel" src="static/images/cancel.png" alt="Icon cancel"></a></div>
+        <!-- Page Title -->
+        <h1>Supprimer un montant</h1>
+    </header>
+    <hr>
+
+    <!---------- MAIN CONTENT ---------->
+    <section>
+        <form class="form-remove"method="POST">
+
+            <!-- Crypto list -->
+            <div>
+                <select class="select-remove" name="select_remove">
+                  <option>Sélectionner une crypto</option>
+                  <option value="Bitcoin">Bitcoin</option>
+                  <option value="Ethereum">Ethereum</option>
+                  <option value="Ripple">Ripple</option>
+                </select>
+            </div>
+
+            <!-- Amount to remove -->
+            <div>
+                <input class="input-remove" name="amount_remove" placeholder="Montant à supprimer">
+            </div>
+
+            <!-- Submit button -->
+            <input class="submit-remove" type="submit" value="VALIDER">
+
+        </form>
+    </section>
+
+{% endblock %}
