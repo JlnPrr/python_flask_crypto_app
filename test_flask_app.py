@@ -20,7 +20,11 @@ def index():
     return render_template('index.html', amount=str(portfolio_sum),
                            btc_names=evolutions[0], btc_percent=evolutions[1],
                            eth_names=evolutions[2], eth_percent=evolutions[3],
-                           xrp_names=evolutions[4], xrp_percent=evolutions[5],)
+                           xrp_names=evolutions[4], xrp_percent=evolutions[5])
+
+def test_1():
+    tval = index()
+    assert isinstance(tval,str,list)
 
 
 # Affiche la page add
@@ -41,9 +45,11 @@ def add():
             select_add = 3
         from config import portfolio_insert
         portfolio_insert(quantity, price, select_add)
-    from config import display_msg
-    message = display_msg()
-    return render_template('add.html', message=str(message))
+    return render_template('add.html')
+
+def test_2():
+    tval = add()
+    assert isinstance(tval,list)
 
 
 # Affiche la page remove
@@ -62,9 +68,11 @@ def remove():
             select_remove = 3
         from config import portfolio_remove
         portfolio_remove(quantity, select_remove)
-    from config import display_msg
-    message = display_msg()
-    return render_template('remove.html', message=str(message))
+    return render_template('remove.html')
+
+def test_3():
+    tval = remove()
+    assert isinstance(tval,list)
 
 
 # Affiche la page graph
@@ -73,6 +81,11 @@ def graph():
     # from config import graph_insert
     # graph_insert()
     return render_template('graph.html')
+
+
+def test_4():
+    tval = graph()
+    assert isinstance(tval,list)
 
 
 #if __name__ == '__main__':

@@ -25,3 +25,8 @@ schedule.every().day.at("13:40").do(data)
 while 1:
     schedule.run_pending()
     time.sleep(1)
+
+
+def test_1():
+    tval = data()
+    assert tval == None

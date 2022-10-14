@@ -16,8 +16,7 @@ DEBUG = True
 global returned_value
 global cursor
 global connection
-global val
-val=3
+global tval
 
 
 # Ouverture du fichier de la database SQLite 3
@@ -29,6 +28,11 @@ def open_database():
     connection = sqlite3.connect(location)
     print('Opened database successfully')
     cursor = connection.cursor()
+
+
+def test1():
+    tval = open_database()
+    assert tval == None
 
 
 # Utilsation de l'API CoinMarketCAP pour 3 types de crypto
@@ -65,6 +69,12 @@ def tracking_add(item):
     return returned_value
 
 
+def test_2():
+    assert tracking_add('BTC')
+    assert tracking_add('ETH')
+    assert tracking_add('XRP')
+
+
 # Calcul de la valeur totale du portfeuille
 def portfolio_amount():
     open_database()
@@ -73,6 +83,11 @@ def portfolio_amount():
     sum_value = round(sum_request[0][0], 2)
     connection.close()
     return sum_value
+
+
+def test_3():
+    tval = portfolio_amount()
+    assert isinstance(tval, (int, float))
 
 
 # Calcul de l'evolution statistique des cryptos
@@ -119,6 +134,11 @@ def cryptos_evolution():
     return [btc_names, btc_percent, eth_names, eth_percent, xrp_names, xrp_percent]
 
 
+def test_4():
+    tval = crypto_evolution()
+    assert isinstance(tval, list)
+
+
 # Creation des entrées dans la table tracking
 def tracking_create():
     open_database()
@@ -136,6 +156,11 @@ def tracking_create():
         tracking_add('XRP') + """', '""" + day_date + """')""").fetchall()
     connection.commit()
     connection.close()
+
+
+def test5():
+    tval = tracking_create()
+    assert tval == None
 
 
 # Ajout dans la table portfolio
@@ -160,6 +185,11 @@ def portfolio_insert(quantity, price_purchase, select_add):
     connection.close()
 
 
+def test_6():
+    tval = portfolio_insert('100','53','3')
+    assert tval == None
+
+
 # Supression dans la table portfolio
 def portfolio_remove(quantity, select_remove):
     open_database()
@@ -176,28 +206,17 @@ def portfolio_remove(quantity, select_remove):
             UPDATE portfolio SET crypto_quantity = (crypto_quantity - '""" + r_p + """'),
             price_purchase = (price_purchase - ((price_purchase * '""" + r_p + """') / crypto_quantity))
             WHERE crypto_quantity > '""" + r_p + """' AND portfolio_tracking_id = '""" + p_i + """'""").fetchall()
-        connection.commit()
-        val = 1
     elif float(c_q[0][0]) == float(r_p):
-        #cursor.execute("""DELETE FROM portfolio WHERE portfolio_tracking_id = '""" + p_i + """'""").fetchall()
-        val = 2
+        cursor.execute("""DELETE FROM portfolio WHERE portfolio_tracking_id = '""" + p_i + """'""").fetchall()
     else:
-        #print("Quantité supérieure au montant disponible")
-        val = 2
+        print("Quantité supérieure au montant disponible")
+    connection.commit()
     connection.close()
 
 
-# Affichage message intéractif
-def display_msg():
-    if val == 1:
-        message = f'Transaction réussi'
-    elif val == 2:
-        message = f'Transaction impossible'
-    elif val == 3:
-        message = f'Remplisser les champs puis Validez'
-    else:
-        message = f'Transaction en attente'
-    return message
+def test_7():
+    tval = portfolio_remove('50','3')
+    assert tval == None
 
 
 global num
@@ -219,6 +238,11 @@ def select_tracking_rows(num):
     return tab
 
 
+def test_8():
+    tval = select_tracking_rows(9)
+    assert isinstance(tval,list)
+
+
 # Affiche les lignes groupées
 def select_tracking_rows_group(numb):
     open_database()
@@ -229,8 +253,14 @@ def select_tracking_rows_group(numb):
     offset_value = str(total_rows[0][0] - numb)
     print(offset_value)
     tab_g = cursor.execute(
-        """SELECT crypto_code, crypto_price from tracking GROUP BY crypto_code LIMIT '""" + nums
-        + """' OFFSET """ + offset_value).fetchall()
+        """SELECT crypto_code, crypto_price from tracking GROUP BY crypto_code""").fetchall()
     print(tab_g)
     return tab_g
+
+def test_8():
+    tval = select_tracking_rows_group(9)
+    assert isinstance(tval,list)
+
+
+
 

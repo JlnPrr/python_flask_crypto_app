@@ -30,7 +30,7 @@ h1 {
 #container {
     background-color: #100f0f;
     min-height:100%;
-    max-width: 70%;
+    max-width: 100%;
     margin: auto;
 }
 
@@ -220,32 +220,32 @@ hr {
         width: 21px;
     }
     .nav-icon {
-        height: 18px;
-        width: 18px;
+        height: 24px;
+        width: 24px;
     }
     li {
         margin-right: 0.2vw;
     }
     h1 {
         margin-top: 1.25vh;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
 
     /* SECTION ADD PAGE AND REMOVE PAGE */
     .input-add, .input-remove {
         height: 4.2vh;
         width: 46vw;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
     .select-add, .select-remove {
         height: 6vh;
         width: 48vw;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
     .submit-add, .submit-remove {
         height: 5vh;
         width: 27vw;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     /* SECTION INDEX PAGE */
@@ -269,8 +269,8 @@ hr {
         margin-top: 1.6vh;
     }
     .icon-cancel {
-        height: 22px;
-        width: 22px;
+        height: 28px;
+        width: 28px;
     }
     .nav-icon {
         height: 20px;
@@ -281,22 +281,22 @@ hr {
         margin-top: 0.9vh;
     }
     h1 {
-        font-size: 1.4rem;
+        font-size: 1.7rem;
     }
 
     /* SECTION ADD PAGE AND REMOVE PAGE */
     .input-add, .input-remove {
         width: 40vw;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
     .select-add, .select-remove {
         height: 6.5vh;
         width: 42vw;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
     .submit-add, .submit-remove {
         width: 27vw;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     /* SECTION INDEX PAGE */
@@ -322,8 +322,8 @@ hr {
         margin-top: 1.5vh;
     }
     .icon-cancel {
-        height: 23px;
-        width: 23px;
+        height: 27px;
+        width: 27px;
         margin-top: 1.4vh;
     }
     .nav-icon {
@@ -332,24 +332,24 @@ hr {
     }
     h1 {
         margin-top: 0.9vh;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     /* SECTION ADD PAGE AND REMOVE PAGE */
     .input-add, .input-remove {
         height: 4vh;
         width: 30vw;
-        font-size: 1.1rem;
+        font-size: 1.35rem;
     }
     .select-add, .select-remove {
         height: 6.5vh;
         width: 32vw;
-        font-size: 1.1rem;
+        font-size: 1.35rem;
     }
     .submit-add, .submit-remove {
         height: 6vh;
         width: 17vw;
-        font-size: 1.2rem;
+        font-size: 1.55rem;
     }
 
     /* SECTION INDEX PAGE */
@@ -381,14 +381,22 @@ hr {
 /******* A partir de 1200px *******/
 @media only screen and (min-width: 1200px) {
 
+    #container {
+        background-color: #100f0f;
+        min-height:100%;
+        max-width: 98%;
+        margin: auto;
+    }
+
+
     /* HEADER */
     #logo {
         font-size: 1.9rem;
         margin-left: 0.6vw;
     }
     .icon-cancel {
-        height: 24px;
-        width: 24px;
+        height: 29px;
+        width: 29px;
         margin-top: 1.3vh;
     }
     .nav-icon {
@@ -397,23 +405,23 @@ hr {
     }
     h1 {
         margin-top: 0.9vh;
-        font-size: 1.6rem;
+        font-size: 1.7rem;
     }
 
     /* SECTION ADD PAGE AND REMOVE PAGE */
     .input-add, .input-remove {
         height: 3.4vh;
         width: 28vw;
-        font-size: 1.15rem;
+        font-size: 1.35rem;
     }
     .select-add, .select-remove {
         height: 7vh;
         width: 30vw;
-        font-size: 1.15rem;
+        font-size: 1.35rem;
     }
     .submit-add, .submit-remove {
         width: 16vw;
-        font-size: 1.25rem;
+        font-size: 1.40rem;
     }
 
     /* SECTION INDEX PAGE */
@@ -422,7 +430,7 @@ hr {
         font-size: 3rem;
     }
     .evolution {
-        width: 65%;
+        width: 75%;
     }
     .evo-row p {
         font-size: 1.35rem;
@@ -433,6 +441,13 @@ hr {
 
 /******* A partir de 1400px *******/
 @media only screen and (min-width: 1400px){
+    #container {
+        background-color: #100f0f;
+        min-height:100%;
+        max-width: 90%;
+        margin: auto;
+    }
+
 
     /* HEADER */
     #logo {
@@ -440,23 +455,27 @@ hr {
         margin-top: 1.3vh;
     }
     .icon-cancel {
-    height: 26px;
-    width: 26px;
-}
+        height: 28px;
+        width: 28px;
+    }
+    .nav-icon {
+        height: 26px;
+        width: 26px;
+    }
     h1 {
         margin-top: 1.2vh;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 
     /* SECTION ADD PAGE AND REMOVE PAGE */
     .input-add, .input-remove {
         height: 3.2vh;
         width: 23vw;
-        font-size: 1.25rem;
+        font-size: 1.35rem;
     }
     .select-add, .select-remove {
         width: 25vw;
-        font-size: 1.25rem;
+        font-size: 1.35rem;
     }
     .submit-add, .submit-remove {
         width: 13vw;
@@ -465,10 +484,55 @@ hr {
 
     /* SECTION INDEX PAGE */
     .evolution {
-        width: 60%;
+        width: 65%;
     }
     .evo-row p {
         padding: 2.5%;
     }
 }
 
+
+/******* A partir de 1600px *******/
+@media only screen and (min-width: 1600px){
+    #container {
+        max-width: 80%;
+        margin: auto;
+    }
+
+    /* HEADER */
+    #logo {
+        font-size: 2rem;
+    }
+    .icon-cancel {
+        height: 28px;
+        width: 28px;
+    }
+    .nav-icon {
+        height: 27px;
+        width: 27px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    /* SECTION ADD PAGE AND REMOVE PAGE */
+    .input-add, .input-remove {
+        height: 3.2vh;
+        width: 23vw;
+        font-size: 1.4rem;
+    }
+    .select-add, .select-remove {
+        width: 25vw;
+        font-size: 1.4rem;
+    }
+    .submit-add, .submit-remove {
+        width: 13vw;
+        font-size: 1.4rem;
+    }
+
+     /* SECTION INDEX PAGE */
+    .evolution {
+        width: 60%;
+    }
+
+}

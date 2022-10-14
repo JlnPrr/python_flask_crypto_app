@@ -1,4 +1,4 @@
-Développer une petite application web mobile pour stocker et gérer la cryptomonnnaie.
+Développer une petite application web mobile pour stocker et gérer la cryptomonnaie.
 
 Au minimum une page avec la liste des crypto actifs achetés et une indication sur la rentabilité actuelle :
 est-ce le moment de vendre et de prendre des bénéfices, ou au contraire de limiter les pertes ?
@@ -20,7 +20,8 @@ Pour y accéder, cliquer sur le solde du jour de la page d’accueil de l’appl
 
 - Langage: python
 - Framework: Flask
-- Bibliothèque requests, Matplotlib
+- Bibliothèques: Requests, Matplotlib, Pandas, Schedule, Pytest
+
 
 
 Lien de l'application: https://jlnprr.pythonanywhere.com/
