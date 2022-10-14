@@ -9,7 +9,6 @@ from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import json
 import time
 import matplotlib.pyplot as plt
-import numpy
 import pprint
 
 # Active le mode debug
