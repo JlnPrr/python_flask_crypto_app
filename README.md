@@ -6,9 +6,9 @@ est-ce le moment de vendre et de prendre des bénéfices, ou au contraire de lim
 Parmi les plus connus, il y a le bitcoin, l’ethereum et le ripple.
 
 Ensuite, un espace d’administration pour ajouter et supprimer les transactions :
-o Le type de crypto actif acheté
-o À quel prix ?
-o Et en quelle quantité ?
+- Le type de crypto actif acheté
+- À quel prix ?
+- Et en quelle quantité ?
 
 Utiliser l’API de CoinMarketCap.
 
@@ -18,8 +18,10 @@ Conserver une fois par jour la valorisation totale de des investissements.
 Pour y accéder, cliquer sur le solde du jour de la page d’accueil de l’application.
 
 
+- Langage: python
+- Framework: Flask
+- Bibliothèque requests, Matplotlib
 
-Langage: python
-Framework: Flask
-Bibliothèque requests, Matplotlib
+
+Lien de l'application: https://jlnprr.pythonanywhere.com/
 
