@@ -38,9 +38,11 @@
             <!-- Submit button -->
             <input class="submit-add" type="submit" value="AJOUTER">
 
-            <div class="message">
+            <div>
                 <br>
-                <p> {{message}} </p>
+                {% for message in get_flashed_messages() %}
+                <p>{{ message }}</p>
+                {% endfor %}
             </div>
 
         </form>

@@ -6,6 +6,7 @@ import time
 
 
 app = Flask(__name__)
+app.secret_key = "+gT'xv^3t+U*7>K9$U7=h)qQ;Zb>Gs"
 
 
 # ROUTES
@@ -26,6 +27,8 @@ def index():
 # Affiche la page add
 @app.route('/add', methods=['POST', 'GET'])
 def add():
+    global val1
+    val1 = 3
     if request.method == 'POST':
         select_add = request.form.get('select_add')
         quantity = request.form.get('quantity')
@@ -40,15 +43,21 @@ def add():
         elif select_add == "Ripple":
             select_add = 3
         from config import portfolio_insert
-        portfolio_insert(quantity, price, select_add)
-    from config import display_msg
-    message = display_msg()
-    return render_template('add.html', message=str(message))
+        val1 = portfolio_insert(quantity, price, select_add)
+    if val1 == 1:
+        flash("Transaction réussie")
+    elif val1 == 2:
+        flash("Transaction impossible")
+    else:
+        flash("Remplisser les champs puis Validez")
+    return render_template('add.html')
 
 
 # Affiche la page remove
 @app.route('/remove', methods=['POST', 'GET'])
 def remove():
+    global val2
+    val2 = 3
     if request.method == 'POST':
         select_remove = request.form.get('select_remove')
         quantity = request.form.get('amount_remove')
@@ -61,10 +70,14 @@ def remove():
         elif select_remove == "Ripple":
             select_remove = 3
         from config import portfolio_remove
-        portfolio_remove(quantity, select_remove)
-    from config import display_msg
-    message = display_msg()
-    return render_template('remove.html', message=str(message))
+        val2 = portfolio_remove(quantity, select_remove)
+    if val2 == 1:
+        flash("Transaction réussie")
+    elif val2 == 2:
+        flash("Transaction impossible")
+    else:
+        flash("Remplisser les champs puis Validez")
+    return render_template('remove.html')
 
 
 # Affiche la page graph

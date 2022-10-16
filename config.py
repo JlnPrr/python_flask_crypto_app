@@ -17,7 +17,7 @@ global returned_value
 global cursor
 global connection
 global val
-val=3
+val = 3
 
 
 # Ouverture du fichier de la database SQLite 3
@@ -138,8 +138,8 @@ def tracking_create():
     connection.close()
 
 
-# Ajout dans la table portfolio
 def portfolio_insert(quantity, price_purchase, select_add):
+    global val
     open_database()
     now = datetime.now()
     day_date = str(now.strftime("%Y-%m-%d %H:%M:%S"))
@@ -157,11 +157,15 @@ def portfolio_insert(quantity, price_purchase, select_add):
         ON CONFLICT (id_portfolio) DO UPDATE SET portfolio_tracking_id = portfolio_tracking_id + 1
         """).fetchall()
     connection.commit()
+    val = 1
     connection.close()
+    return val
 
 
 # Supression dans la table portfolio
 def portfolio_remove(quantity, select_remove):
+    global val
+    #val = 3
     open_database()
     r_p = str(round(float(quantity), 2))
     print(r_p)
@@ -183,21 +187,11 @@ def portfolio_remove(quantity, select_remove):
         val = 2
     else:
         #print("Quantité supérieure au montant disponible")
-        val = 2
+        val = 3
+    connection.commit()
     connection.close()
+    return val
 
-
-# Affichage message intéractif
-def display_msg():
-    if val == 1:
-        message = f'Transaction réussi'
-    elif val == 2:
-        message = f'Transaction impossible'
-    elif val == 3:
-        message = f'Remplisser les champs puis Validez'
-    else:
-        message = f'Transaction en attente'
-    return message
 
 
 global num
